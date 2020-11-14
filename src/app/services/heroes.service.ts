@@ -32,7 +32,7 @@ export class HeroesService {
 
     delete heroeTemp.id;
 
-    return this.http.put(`${this.url}/heroes/${ heroe.id }.json`, heroeTemp);
+    return this.http.put(`${this.url}/Heroes/${ heroe.id }.json`, heroeTemp);
   }
 
 }
