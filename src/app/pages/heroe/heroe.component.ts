@@ -42,7 +42,7 @@ export class HeroeComponent implements OnInit {
       return;
     }
 
-    const Swal = require('sweetalert2')
+    const Swal = require('sweetalert2');
 
     Swal.fire({
       title: 'Espere',
