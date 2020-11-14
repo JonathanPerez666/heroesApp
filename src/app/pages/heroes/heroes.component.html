@@ -33,6 +33,18 @@
                 <label *ngIf="!heroe.vivo" class="badge badge-danger">Muerto</label>
 
             </td>
+            <td>
+
+                <button class="btn btn-info mr-1"
+                        [routerLink]="['/heroe', heroe.id ]">
+                    <i class="fa fa-pen"></i>
+                    EDIT
+                </button>
+                <button class="btn btn-danger">
+                    <i class="fa fa-trash"></i>
+                </button>
+
+            </td>
         </tr>
     </tbody>
 </table>
