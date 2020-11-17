@@ -22,6 +22,7 @@ export class HeroeComponent implements OnInit {
   ngOnInit(){
 
     const id = this.route.snapshot.paramMap.get('id');
+    
 
     if( id !== 'nuevo' ){
 
@@ -42,12 +43,10 @@ export class HeroeComponent implements OnInit {
       return;
     }
 
-    const Swal = require('sweetalert2');
-
     Swal.fire({
       title: 'Espere',
       text: 'Guardando información',
-      type: 'info',
+      icon: 'info',
       allowOutsideClick: false
     });
     Swal.showLoading();

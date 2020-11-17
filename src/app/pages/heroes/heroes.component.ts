@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroeModel } from 'src/app/models/heroe.model';
 import { HeroesService } from 'src/app/services/heroes.service';
-
 import Swal from 'sweetalert2';
+//import Swal from 'sweetalert2/dist/sweetalert2.js'
 
 @Component({
   selector: 'app-heroes',
@@ -16,7 +16,7 @@ export class HeroesComponent implements OnInit {
 
   constructor( private heroesService: HeroesService ) { }
 
-  ngOnInit() {
+  ngOnInit(){
 
     this.cargando = true;
     this.heroesService.getHeroes()
@@ -26,15 +26,12 @@ export class HeroesComponent implements OnInit {
         });
 
   }
+  borrarHeroe ( heroe: HeroeModel, i: number ){
 
-  borrarHeroe( heroe: HeroeModel, i: number ){
-  
-    const Swal = require('sweetalert2')
-
-    Swal.fire({
+  Swal.fire({
       title: '¿Está seguro?',
       text: `Está seguro que desea borrar a ${ heroe.nombre }?`,
-      type: 'question',
+      icon: 'question',
       showConfirmButton: true,
       showCancelButton: true
     }).then( resp =>{
